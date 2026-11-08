@@ -46,7 +46,7 @@ jobs:
           head -c 300 core/parsing/build/reports/kover/report.xml || true; echo
           curl -sSL -o /tmp/jacococli.jar https://repo1.maven.org/maven2/org/jacoco/org.jacoco.cli/0.8.14/org.jacoco.cli-0.8.14-nodeps.jar
           echo "== exec summary"; java -jar /tmp/jacococli.jar execinfo core/parsing/build/kover/bin-reports/test.exec > /tmp/execinfo.txt 2>&1 || true
-          head -15 /tmp/execinfo.txt; wc -l /tmp/execinfo.txt; grep -c "kotlin/" /tmp/execinfo.txt || true; grep -E "io/github|ladych|Test" /tmp/execinfo.txt | head || true
+          head -15 /tmp/execinfo.txt; wc -l /tmp/execinfo.txt; grep -c "kotlin/" /tmp/execinfo.txt || true; grep ladych /tmp/execinfo.txt || true
           awk '{print $NF}' /tmp/execinfo.txt | cut -d/ -f1-3 | sort | uniq -c | sort -rn | head -20
           echo "== class ids in classes dir"; java -jar /tmp/jacococli.jar classinfo core/parsing/build/classes/kotlin/main | head -20 || true
           echo "== class ids in jar"; java -jar /tmp/jacococli.jar classinfo core/parsing/build/libs/parsing.jar | head -20 || true
