@@ -36,7 +36,7 @@ jobs:
         run: ./gradlew spotlessCheck detekt
 
       - name: Unit tests and coverage
-        run: ./gradlew test koverVerify
+        run: ./gradlew test koverLog koverVerify --continue
 
       - name: Android Lint
         run: ./gradlew lint
