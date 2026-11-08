@@ -44,7 +44,9 @@ jobs:
           ./gradlew :core:parsing:test --rerun --info | grep -E -i "javaagent|Starting process 'Gradle Test Executor" | cut -c1-2000 || true
           ./gradlew :core:parsing:koverXmlReport || true
           head -c 3000 core/parsing/build/reports/kover/report.xml || true
-          echo; find core/parsing/build/kover core/parsing/build/classes -maxdepth 4 | head -40 || true
+          echo; ls -la core/parsing/build/kover/bin-reports/ core/parsing/build/libs/ || true
+          ./gradlew :core:parsing:dependencies --configuration testRuntimeClasspath | grep -E -i "kotest|junit|jacoco|byte" | head -30 || true
+          java -version
 
       - name: Android Lint
         run: ./gradlew lint
