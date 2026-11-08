@@ -1,19 +1,8 @@
 plugins {
     alias(libs.plugins.einkaufzettel.jvm.library)
-    alias(libs.plugins.kover)
+    alias(libs.plugins.einkaufzettel.jvm.coverage)
 }
 
 dependencies {
     api(project(":core:domain"))
-}
-
-kover {
-    useJacoco()
-    reports {
-        verify {
-            rule {
-                minBound(90)
-            }
-        }
-    }
 }

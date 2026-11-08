@@ -13,9 +13,10 @@ The project is developed test-first. Most tests should run on the JVM in millise
   Gradle 9.
 - Android modules use JUnit 4 for local unit tests; Robolectric and Compose UI tests follow when screens grow.
 - Fakes are preferred over mocks. Time and IDs are injected (`Clock`, later `IdGenerator`).
-- Kover verifies at least 90 % line coverage in `:core:domain` and `:core:parsing` – as an indicator, not
-  as a goal.
+- Gradle's JaCoCo plugin verifies at least 90 % line coverage in `:core:domain` and `:core:parsing` – as an
+  indicator, not as a goal. Kover was tried first, but under Gradle 9.6 its reports showed 0 % although the
+  recorded execution data was complete.
 
 ## Consequences
 
-- `./gradlew test koverVerify` runs the whole fast suite; CI runs it on every push.
+- `./gradlew test jacocoTestCoverageVerification` runs the whole fast suite; CI runs it on every push.

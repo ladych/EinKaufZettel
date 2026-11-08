@@ -38,9 +38,9 @@ Decisions are recorded in [`docs/adr`](docs/adr).
 Requirements: JDK 17 or newer (CI uses 21) and the Android SDK.
 
 ```bash
-./gradlew assembleDebug                                   # build the app
-./gradlew spotlessCheck detekt test koverVerify lint      # everything CI checks
-./gradlew spotlessApply                                   # fix formatting
+./gradlew assembleDebug                                                        # build the app
+./gradlew spotlessCheck detekt test jacocoTestCoverageVerification lint   # everything CI checks
+./gradlew spotlessApply                                                        # fix formatting
 ```
 
 ## Working on the code

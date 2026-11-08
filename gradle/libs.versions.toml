@@ -4,7 +4,6 @@ kotlin = "2.4.20"
 detekt = "2.0.0-alpha.6"
 spotless = "8.6.0"
 ktlint = "1.7.1"
-kover = "0.9.10"
 
 androidx-activity = "1.13.0"
 androidx-lifecycle = "2.11.0"
@@ -64,7 +63,6 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 detekt = { id = "dev.detekt", version.ref = "detekt" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
-kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 
 # Convention plugins from build-logic
 einkaufzettel-android-application = { id = "einkaufzettel.android.application" }
@@ -72,3 +70,4 @@ einkaufzettel-android-library = { id = "einkaufzettel.android.library" }
 einkaufzettel-android-compose = { id = "einkaufzettel.android.compose" }
 einkaufzettel-android-feature = { id = "einkaufzettel.android.feature" }
 einkaufzettel-jvm-library = { id = "einkaufzettel.jvm.library" }
+einkaufzettel-jvm-coverage = { id = "einkaufzettel.jvm.coverage" }

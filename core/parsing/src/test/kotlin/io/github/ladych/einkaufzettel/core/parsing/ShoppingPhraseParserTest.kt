@@ -15,6 +15,14 @@ class ShoppingPhraseParserTest {
     }
 
     @Test
+    fun `a product spoken without amount has no quantity`() {
+        val item = parser.parse("Milch").single()
+
+        item.name shouldBe "Milch"
+        item.quantity shouldBe null
+    }
+
+    @Test
     fun `surrounding whitespace is not part of the name`() {
         parser.parse("  Milch  ") shouldBe listOf(ParsedItem(name = "Milch"))
     }

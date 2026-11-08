@@ -32,6 +32,10 @@ gradlePlugin {
             id = "einkaufzettel.jvm.library"
             implementationClass = "JvmLibraryConventionPlugin"
         }
+        register("jvmCoverage") {
+            id = "einkaufzettel.jvm.coverage"
+            implementationClass = "JvmCoverageConventionPlugin"
+        }
         register("detekt") {
             id = "einkaufzettel.detekt"
             implementationClass = "DetektConventionPlugin"
