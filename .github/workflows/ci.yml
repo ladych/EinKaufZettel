@@ -44,6 +44,10 @@ jobs:
       - name: Build debug and release APKs
         run: ./gradlew assembleDebug assembleRelease
 
+      - name: Print coverage agent errors
+        if: failure()
+        run: find . -path '*/build/*' -name 'coverage-error.log' -print -exec cat {} \; || true
+
       - name: Upload reports
         if: failure()
         uses: actions/upload-artifact@v4

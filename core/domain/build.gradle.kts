@@ -4,6 +4,7 @@ plugins {
 }
 
 kover {
+    useJacoco()
     reports {
         verify {
             rule {

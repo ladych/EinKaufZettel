@@ -8,6 +8,7 @@ dependencies {
 }
 
 kover {
+    useJacoco()
     reports {
         verify {
             rule {
