@@ -2,7 +2,7 @@
 agp = "9.4.0"
 kotlin = "2.4.20"
 detekt = "2.0.0-alpha.6"
-spotless = "8.6.0"
+spotless = "8.11.0"
 ktlint = "1.7.1"
 
 androidx-activity = "1.13.0"
