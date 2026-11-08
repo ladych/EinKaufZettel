@@ -17,6 +17,8 @@ android {
     }
 
     androidResources {
+        // Only languages the app is actually translated into; drops the other locales of AndroidX libraries.
+        localeFilters += setOf("en", "de")
         generateLocaleConfig = true
     }
 
