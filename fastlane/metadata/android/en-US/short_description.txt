@@ -1,0 +1,1 @@
+Local-first shopping list with voice input, categories and summaries

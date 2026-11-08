@@ -1,0 +1,10 @@
+EinKaufZettel ist eine Einkaufsliste, die auf deinem Handy bleibt.
+
+Geplante Funktionen:
+* Spracheingabe mit Live-Text: Sag „zwei Liter Milch, drei Äpfel und Brot“ und es erscheinen drei Artikel.
+* Kategorien in der Reihenfolge deines Ladens.
+* Eine Zusammenfassung nach jedem Einkauf: was gekauft wurde, was noch offen ist, wie lange es gedauert hat.
+* Funktioniert komplett offline: kein Konto, kein Server, kein Tracking, keine Internet-Berechtigung.
+* Deutsch und Englisch.
+
+Die App ist in einer frühen Entwicklungsphase und hat noch keine Funktionen.

@@ -1,0 +1,12 @@
+# Builds upon detekt's default configuration (buildUponDefaultConfig = true).
+# Only deviations from the defaults belong here.
+
+naming:
+  FunctionNaming:
+    ignoreAnnotated:
+      - Composable
+
+style:
+  MagicNumber:
+    ignoreAnnotated:
+      - Composable

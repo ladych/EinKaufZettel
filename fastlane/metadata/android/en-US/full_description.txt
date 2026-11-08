@@ -1,0 +1,10 @@
+EinKaufZettel is a shopping list that stays on your phone.
+
+Planned features:
+* Voice input with live text: say "two litres of milk, three apples and bread" and three items appear.
+* Categories in the order of your store.
+* A summary after every shopping trip: what you bought, what is still open, how long it took.
+* Works completely offline: no account, no server, no tracking, no internet permission.
+* English and German.
+
+The app is in early development and has no features yet.

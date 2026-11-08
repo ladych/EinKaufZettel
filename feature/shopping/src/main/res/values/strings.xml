@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shopping_list_empty_title">Your shopping list is empty</string>
+    <string name="shopping_list_empty_message">Soon you can add items by voice: “two litres of milk, three apples and bread”.</string>
+</resources>

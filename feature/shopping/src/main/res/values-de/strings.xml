@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shopping_list_empty_title">Dein Einkaufszettel ist leer</string>
+    <string name="shopping_list_empty_message">Bald kannst du Artikel per Sprache hinzufügen: „zwei Liter Milch, drei Äpfel und Brot“.</string>
+</resources>
