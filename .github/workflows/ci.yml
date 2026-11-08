@@ -44,9 +44,10 @@ jobs:
           ./gradlew :core:parsing:test --rerun --info | grep -E -i "javaagent|Starting process 'Gradle Test Executor" | cut -c1-2000 || true
           ./gradlew :core:parsing:koverXmlReport || true
           head -c 3000 core/parsing/build/reports/kover/report.xml || true
-          echo; ls -la core/parsing/build/kover/bin-reports/ core/parsing/build/libs/ || true
-          ./gradlew :core:parsing:dependencies --configuration testRuntimeClasspath | grep -E -i "kotest|junit|jacoco|byte" | head -30 || true
-          java -version
+          curl -sSL -o /tmp/jacococli.jar https://repo1.maven.org/maven2/org/jacoco/org.jacoco.cli/0.8.14/org.jacoco.cli-0.8.14-nodeps.jar
+          echo "== exec entries for app classes"; java -jar /tmp/jacococli.jar execinfo core/parsing/build/kover/bin-reports/test.exec | grep -i einkauf || true
+          echo "== class ids in classes dir"; java -jar /tmp/jacococli.jar classinfo core/parsing/build/classes/kotlin/main | head -20 || true
+          echo "== class ids in jar"; java -jar /tmp/jacococli.jar classinfo core/parsing/build/libs/parsing.jar | head -20 || true
 
       - name: Android Lint
         run: ./gradlew lint
